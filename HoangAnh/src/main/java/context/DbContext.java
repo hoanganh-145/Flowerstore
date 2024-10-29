@@ -3,7 +3,7 @@ import java.sql.*;
 
 public class DbContext {
     
-    private static final String serverName = "PC216";
+    private static final String serverName = "PC232";
     private static final String dbName = "HoaTuoiDB";
     private static final String portNumber = "1433";  
     private static final String userID = "sa";
