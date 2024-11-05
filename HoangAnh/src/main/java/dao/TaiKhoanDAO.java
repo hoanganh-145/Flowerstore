@@ -19,15 +19,15 @@ public class TaiKhoanDAO {
     Connection conn;
     PreparedStatement ps;
     ResultSet rs;
-    public TaiKhoan DangNhap( String tênĐN, String MK)
+    public TaiKhoan DangNhap( String TenDangNhap, String MatKhau)
     {   
         TaiKhoan kq = null;
-        String sql="select* from TaiKhoan where TenĐN=? and MK=?";
+        String sql="select* from TaiKhoan where TenDangNhap=? and MatKhau=?";
         conn =DbContext.getConnection();
         try {
             ps=conn.prepareStatement(sql);
-            ps.setString(1, tênĐN);
-            ps.setString(2, MK);
+            ps.setString(1, TenDangNhap);
+            ps.setString(2, MatKhau);
             rs=ps.executeQuery();
             if(rs.next()) {
                kq = new TaiKhoan(rs.getString(1),rs.getString(2));

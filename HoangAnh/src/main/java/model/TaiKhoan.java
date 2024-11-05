@@ -34,7 +34,7 @@ public class TaiKhoan {
     }
 
     public void setMK(String MK) {
-        this.MK = MK;
+        this.MatKhau = MatKhau;
     }
 
     @Override
